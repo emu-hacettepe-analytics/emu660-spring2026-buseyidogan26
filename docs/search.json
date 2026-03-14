@@ -67,7 +67,7 @@
     "href": "about.html#employements",
     "title": "About Me",
     "section": "Employements",
-    "text": "Employements\n\nFirm PROLUDUR, Strategy & Growth, 2022-2024\nFirm LUDİ, Strategy & Growth, 2023-2024\nFirm ASELSAN, 2024 - ongoing"
+    "text": "Employements\n\nFirm PROLUDUR, Strategy & Growth, 2022-2024\nFirm LUDI, Strategy & Growth, 2023-2024\nFirm ASELSAN, 2024 - ongoing"
   },
   {
     "objectID": "assignments/assignment-1.html",
@@ -104,7 +104,7 @@
     "href": "index.html",
     "title": "Welcome to My Analytics Lab",
     "section": "",
-    "text": "Hello!! My name is xxx xxxx.\nThis is my personal webpage.\nPlease stay tuned to follow my works on data analytics, blog posts, and more.\n\n\n\n Back to top"
+    "text": "Hello!! My name is Buse EYIDOGAN\nThis is my personal webpage for EMU660.\nPlease stay tuned to follow my works on data analytics, blog posts, and more.\n\n\n\n Back to top"
   },
   {
     "objectID": "posts.html",
@@ -112,5 +112,12 @@
     "title": "My Blog",
     "section": "",
     "text": "This page is under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "My name is Buse. I am interested in data analytics and data visualization."
   }
 ]

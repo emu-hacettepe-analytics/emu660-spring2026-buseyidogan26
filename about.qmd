@@ -3,7 +3,9 @@ title: "About Me"
 sidebar: false 
 ---
 
-![](assets/images/vesikalik.jpeg){fig-align="center"}
+My name is Buse. I am interested in data analytics and data visualization.
+
+![](images/buse.JPG){fig-align="center" width="6cm"}
 
 # Education
 
@@ -16,14 +18,14 @@ sidebar: false
 
 1.  Firm PROLUDUR, Strategy & Growth, 2022-2024
 
-2.  Firm LUDİ, Strategy & Growth, 2023-2024
+2.  Firm LUDI, Strategy & Growth, 2023-2024
 
 3.  Firm ASELSAN, 2024 - ongoing
-
 
 # Competencies
 
 R, Quarto, Git, Python
 
 # Hobbies
+
 F1
