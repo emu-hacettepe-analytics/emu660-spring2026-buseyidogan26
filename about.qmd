@@ -3,7 +3,7 @@ title: "About Me"
 sidebar: false 
 ---
 
-My name is Buse. I am interested in data analytics and data visualization.![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd25ycTlsNHBscjhxY2doNWNkNmxwaXU2MWpmZmt5aDAzOXpjMnJ4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT9C25UNTwfZuk85WP/giphy.gif){width="150"}
+My name is Buse. I am interested in data analytics and data visualization.![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd25ycTlsNHBscjhxY2doNWNkNmxwaXU2MWpmZmt5aDAzOXpjMnJ4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT9C25UNTwfZuk85WP/giphy.gif){width="131"}
 
 ![](images/buse.JPG){fig-align="center" width="4.2cm" height="5.9cm"}
 
@@ -14,9 +14,11 @@ My name is Buse. I am interested in data analytics and data visualization.![](ht
 
 # Work Experience
 
+-Strategy and Growth Intern -Strategy and Growth Lead Community Manager QMS Engineer
+
 ## Employements
 
-1.  Firm PROLUDUR, Strategy & Growth, 2022-2024
+1.  Firm PROLUDUS, Strategy & Growth, 2022-2024
 
 2.  Firm LUDI, Strategy & Growth, 2023-2024
 
@@ -30,4 +32,4 @@ R, Quarto, Git, Python
 
 F1
 
-![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXc0NzE2MzVzMmNwZmR6MG54a20zd2dpbXdqZHBzNnlwano4amI5aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Irb20yXtA2QStkUnrE/giphy.gif){width="100"}
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXc0NzE2MzVzMmNwZmR6MG54a20zd2dpbXdqZHBzNnlwano4amI5aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Irb20yXtA2QStkUnrE/giphy.gif){width="160"}

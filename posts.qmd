@@ -3,5 +3,6 @@ title: "My Blog"
 sidebar: false 
 ---
 
+*This page is under construction.*
 
-This page is under construction. ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmo1NW84YWJlYWFpamx5b2d1N2E2OXFxbTZkMmoyNG01eW83ems2ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Mah9dFWo1WZX0WM62Q/giphy.gif){fig-align="center" width="200"}
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmo1NW84YWJlYWFpamx5b2d1N2E2OXFxbTZkMmoyNG01eW83ems2ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Mah9dFWo1WZX0WM62Q/giphy.gif){fig-align="center" width="200"}
