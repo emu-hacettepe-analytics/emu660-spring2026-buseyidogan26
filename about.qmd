@@ -7,12 +7,12 @@ My name is Buse. I am interested in data analytics and data visualization.![](ht
 
 ![](images/buse.JPG){fig-align="center" width="4.2cm" height="5.9cm"}
 
-# Education
+## Education
 
 -   B.S., İhsan Doğramacı Bilkent University, Turkey, 2018 - 2023.
 -   M.S., Industrial Engineering, Hacettepe University, Turkey, 2026 - ongoing.
 
-# Work Experience
+## Work Experience
 
 1.  Strategy and Growth Intern
 2.  Strategy and Growth Lead Community Manager
@@ -26,16 +26,15 @@ My name is Buse. I am interested in data analytics and data visualization.![](ht
 
 3.  Firm ASELSAN, 2024 - ongoing
 
-# Competencies
+## Competencies
 
 R, Quarto, Git, Python
 
 
-# My CV
-You can download my CV here:  
-[Download CV](files/Buse_Erdogan_Resume.pdf){.btn .btn-success}
+## Resume
+[Download Resume](files/Buse_Erdogan_Resume.pdf){.btn .btn-dark}
 
-# Hobbies
+## Hobbies
 
 F1
 

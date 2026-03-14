@@ -70,11 +70,46 @@
     "text": "My name is Buse. I am interested in data analytics and data visualization."
   },
   {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\n\nB.S., İhsan Doğramacı Bilkent University, Turkey, 2018 - 2023.\nM.S., Industrial Engineering, Hacettepe University, Turkey, 2026 - ongoing."
+  },
+  {
+    "objectID": "about.html#work-experience",
+    "href": "about.html#work-experience",
+    "title": "About Me",
+    "section": "Work Experience",
+    "text": "Work Experience\n\nStrategy and Growth Intern\nStrategy and Growth Lead Community Manager\nQMS Engineer"
+  },
+  {
     "objectID": "about.html#employements",
     "href": "about.html#employements",
     "title": "About Me",
     "section": "Employements",
     "text": "Employements\n\nFirm PROLUDUS, Strategy & Growth, 2022-2024\nFirm LUDI, Strategy & Growth, 2023-2024\nFirm ASELSAN, 2024 - ongoing"
+  },
+  {
+    "objectID": "about.html#competencies",
+    "href": "about.html#competencies",
+    "title": "About Me",
+    "section": "Competencies",
+    "text": "Competencies\nR, Quarto, Git, Python"
+  },
+  {
+    "objectID": "about.html#resume",
+    "href": "about.html#resume",
+    "title": "About Me",
+    "section": "Resume",
+    "text": "Resume\nDownload Resume"
+  },
+  {
+    "objectID": "about.html#hobbies",
+    "href": "about.html#hobbies",
+    "title": "About Me",
+    "section": "Hobbies",
+    "text": "Hobbies\nF1"
   },
   {
     "objectID": "assignments/assignment-1.html",
