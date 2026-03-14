@@ -11,5 +11,5 @@ format:
   html:
     toc: true
     toc-location: left
-    theme: vapor
+    theme: united
     css: styles.css
