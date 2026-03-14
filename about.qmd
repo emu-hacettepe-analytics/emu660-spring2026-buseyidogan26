@@ -30,6 +30,11 @@ My name is Buse. I am interested in data analytics and data visualization.![](ht
 
 R, Quarto, Git, Python
 
+
+# My CV
+You can download my CV here:  
+[Download CV](files/Buse_Erdogan_Resume.pdf){.btn .btn-success}
+
 # Hobbies
 
 F1
