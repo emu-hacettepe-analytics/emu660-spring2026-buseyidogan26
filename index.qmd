@@ -7,3 +7,10 @@ Hello!! My name is **Buse EYIDOGAN** ![](https://media1.giphy.com/media/v1.Y2lkP
 This is my personal webpage for **EMU660.**
 
 Please stay tuned to follow my works on data analytics, blog posts, and more. ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3U1d2tkamZtZ3Rydjg4bjBocDk0aDdlZmZkNDRxb3Q1eHpub2JzeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ye8n2abV5bBQY/giphy.gif){width="178"}
+
+format:
+  html:
+    toc: true
+    toc-location: left
+    theme: vapor
+    css: styles.css

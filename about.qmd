@@ -40,5 +40,5 @@ format:
   html:
     toc: true
     toc-location: left
-    theme: lumen
+    theme: vapor
     css: styles.css
