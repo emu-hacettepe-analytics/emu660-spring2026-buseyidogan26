@@ -14,8 +14,8 @@ My name is Buse. I am interested in data analytics and data visualization.![](ht
 
 # Work Experience
 
-1.  Strategy and Growth Intern 
-2.  Strategy and Growth Lead Community Manager 
+1.  Strategy and Growth Intern
+2.  Strategy and Growth Lead Community Manager
 3.  QMS Engineer
 
 ## Employements
@@ -35,10 +35,3 @@ R, Quarto, Git, Python
 F1
 
 ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXc0NzE2MzVzMmNwZmR6MG54a20zd2dpbXdqZHBzNnlwano4amI5aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Irb20yXtA2QStkUnrE/giphy.gif){width="160"}
-
-format:
-  html:
-    toc: true
-    toc-location: left
-    theme: united
-    css: styles.css
