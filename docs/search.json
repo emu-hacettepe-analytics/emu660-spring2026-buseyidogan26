@@ -63,6 +63,13 @@
     "text": "3.4 Results\nxxxxxx"
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "My name is Buse. I am interested in data analytics and data visualization."
+  },
+  {
     "objectID": "about.html#employements",
     "href": "about.html#employements",
     "title": "About Me",
@@ -112,12 +119,5 @@
     "title": "My Blog",
     "section": "",
     "text": "This page is under construction.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
-    "section": "",
-    "text": "My name is Buse. I am interested in data analytics and data visualization."
   }
 ]
