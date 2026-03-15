@@ -214,18 +214,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignment-1" id="toc-assignment-1" class="nav-link active" data-scroll-target="#assignment-1">Assignment 1</a>
-  <ul class="collapse">
-  <li><a href="#a" id="toc-a" class="nav-link" data-scroll-target="#a">(a)</a></li>
+  <li><a href="#a" id="toc-a" class="nav-link active" data-scroll-target="#a">(a)</a></li>
   <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a></li>
-  <li><a href="#c" id="toc-c" class="nav-link" data-scroll-target="#c">(c)</a></li>
+  <li><a href="#c" id="toc-c" class="nav-link" data-scroll-target="#c">(c)</a>
+  <ul class="collapse">
   <li><a href="#data-check" id="toc-data-check" class="nav-link" data-scroll-target="#data-check">Data Check</a></li>
   <li><a href="#custom-summary-function" id="toc-custom-summary-function" class="nav-link" data-scroll-target="#custom-summary-function">Custom Summary Function</a></li>
   <li><a href="#applying-the-function-using-a-loop" id="toc-applying-the-function-using-a-loop" class="nav-link" data-scroll-target="#applying-the-function-using-a-loop">Applying the Function Using a Loop:</a></li>
   <li><a href="#applying-sapply-function" id="toc-applying-sapply-function" class="nav-link" data-scroll-target="#applying-sapply-function">Applying Sapply Function</a></li>
   <li><a href="#applying-apply-function" id="toc-applying-apply-function" class="nav-link" data-scroll-target="#applying-apply-function">Applying Apply Function</a></li>
-  <li><a href="#d" id="toc-d" class="nav-link" data-scroll-target="#d">(d)</a></li>
+  </ul></li>
+  <li><a href="#d" id="toc-d" class="nav-link" data-scroll-target="#d">(d)</a>
+  <ul class="collapse">
   <li><a href="#polls-us-election-2016" id="toc-polls-us-election-2016" class="nav-link" data-scroll-target="#polls-us-election-2016">Polls US Election 2016</a></li>
+  <li><a href="#ai-usage-statement" id="toc-ai-usage-statement" class="nav-link" data-scroll-target="#ai-usage-statement">AI Usage Statement</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -256,9 +258,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="assignment-1" class="level1">
-<h1>Assignment 1</h1>
-<p>My first assignment has two parts.</p>
 <section id="a" class="level2">
 <h2 class="anchored" data-anchor-id="a">(a)</h2>
 </section>
@@ -267,9 +266,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="c" class="level2">
 <h2 class="anchored" data-anchor-id="c">(c)</h2>
-</section>
-<section id="data-check" class="level2">
-<h2 class="anchored" data-anchor-id="data-check">Data Check</h2>
+<section id="data-check" class="level3">
+<h3 class="anchored" data-anchor-id="data-check">Data Check</h3>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"mtcars"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -284,8 +282,8 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 </div>
 </div>
 </section>
-<section id="custom-summary-function" class="level2">
-<h2 class="anchored" data-anchor-id="custom-summary-function">Custom Summary Function</h2>
+<section id="custom-summary-function" class="level3">
+<h3 class="anchored" data-anchor-id="custom-summary-function">Custom Summary Function</h3>
 <p>The function <code>compute_stats</code> calculates several descriptive statistics <strong>for a numeric vector.</strong></p>
 <p>It returns the mean, median, variance, interquartile range (IQR), minimum, and maximum values as a <strong>named list.</strong></p>
 <div class="cell">
@@ -301,8 +299,8 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="applying-the-function-using-a-loop" class="level2">
-<h2 class="anchored" data-anchor-id="applying-the-function-using-a-loop">Applying the Function Using a Loop:</h2>
+<section id="applying-the-function-using-a-loop" class="level3">
+<h3 class="anchored" data-anchor-id="applying-the-function-using-a-loop">Applying the Function Using a Loop:</h3>
 <p>In this section, the <code>compute_stats</code> function is applied to each numeric column of the <code>mtcars</code> dataset using a for loop. The computed statistics for each column are printed along with the column name.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(mtcars) <span class="co">#to see all column names</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -568,8 +566,8 @@ carb   2.812500   2.000 2.608871e+00   2.00000  1.000   8.000</code></pre>
 </div>
 </div>
 </section>
-<section id="applying-sapply-function" class="level2">
-<h2 class="anchored" data-anchor-id="applying-sapply-function">Applying Sapply Function</h2>
+<section id="applying-sapply-function" class="level3">
+<h3 class="anchored" data-anchor-id="applying-sapply-function">Applying Sapply Function</h3>
 <p>In this section, the <code>sapply</code> function is used as an alternative to a <code>for</code> loop to apply the <code>compute_stats</code> function across all numerical columns of the <code>mtcars</code> dataset. The function is automatically applied to each column, and the resulting statistics are collected in a structured output.</p>
 <p>With this function, the output appears similar to a data frame structure.</p>
 <div class="cell">
@@ -592,8 +590,8 @@ max      1         1         5         8       </code></pre>
 </div>
 </div>
 </section>
-<section id="applying-apply-function" class="level2">
-<h2 class="anchored" data-anchor-id="applying-apply-function">Applying Apply Function</h2>
+<section id="applying-apply-function" class="level3">
+<h3 class="anchored" data-anchor-id="applying-apply-function">Applying Apply Function</h3>
 <p>In this section, the <code>apply</code> function is used to apply <code>compute_stats</code> to all numeric columns of the <code>mtcars</code> dataset.</p>
 <p>Since <code>apply</code> works on matrices, the numeric subset of the dataset is converted to a matrix.</p>
 <p>The function is applied column-wise (margin = 2), producing summary statistics for each column.</p>
@@ -826,11 +824,11 @@ $carb$max
 </div>
 </div>
 </section>
+</section>
 <section id="d" class="level2">
 <h2 class="anchored" data-anchor-id="d">(d)</h2>
-</section>
-<section id="polls-us-election-2016" class="level2">
-<h2 class="anchored" data-anchor-id="polls-us-election-2016">Polls US Election 2016</h2>
+<section id="polls-us-election-2016" class="level3">
+<h3 class="anchored" data-anchor-id="polls-us-election-2016">Polls US Election 2016</h3>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"polls_us_election_2016"</span>)</span>
@@ -1131,6 +1129,18 @@ $carb$max
 <pre><code>[1] FALSE</code></pre>
 </div>
 </div>
+</section>
+<section id="ai-usage-statement" class="level3">
+<h3 class="anchored" data-anchor-id="ai-usage-statement">AI Usage Statement</h3>
+<p>ChatGPT was consulted for guidance on implementing loops, using functions such as `sapply` and `apply`, and handling missing values in data frames.<br>
+<br>
+All outputs produced by the AI tool were carefully reviewed, tested, and modified when necessary using my own understanding to ensure correctness.<br>
+<br>
+Example prompts used include:<br>
+<br>
+- “How can I apply a custom function to all columns of the mtcars dataset using a for loop in R?”<br>
+- “How can I replace NA values differently for numeric and character columns in a data frame?”<br>
+- “How can I count the number of NA values per column in an R dataset?”</p>
 
 
 </section>

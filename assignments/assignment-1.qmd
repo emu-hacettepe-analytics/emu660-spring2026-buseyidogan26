@@ -2,24 +2,20 @@
 title: "Assignment 1"
 ---
 
-# Assignment 1
-
-My first assignment has two parts.
-
 ## (a)
 
 ## (b)
 
 ## (c)
 
-## Data Check
+### Data Check
 
 ```{r}
 data("mtcars")
 head(mtcars)
 ```
 
-## Custom Summary Function
+### Custom Summary Function
 
 The function `compute_stats` calculates several descriptive statistics **for a numeric vector.**
 
@@ -38,7 +34,7 @@ compute_stats <- function(x) {
 }
 ```
 
-## Applying the Function Using a Loop:
+### Applying the Function Using a Loop:
 
 In this section, the `compute_stats` function is applied to each numeric column of the `mtcars` dataset using a for loop. The computed statistics for each column are printed along with the column name.
 
@@ -82,7 +78,7 @@ stats_table <- as.data.frame(do.call(rbind, results))
 stats_table
 ```
 
-## Applying Sapply Function
+### Applying Sapply Function
 
 In this section, the `sapply` function is used as an alternative to a `for` loop to apply the `compute_stats` function across all numerical columns of the `mtcars` dataset. The function is automatically applied to each column, and the resulting statistics are collected in a structured output.
 
@@ -92,7 +88,7 @@ With this function, the output appears similar to a data frame structure.
 sapply(mtcars, compute_stats)
 ```
 
-## Applying Apply Function
+### Applying Apply Function
 
 In this section, the `apply` function is used to apply `compute_stats` to all numeric columns of the `mtcars` dataset.
 
@@ -112,7 +108,7 @@ stats_apply
 
 ## (d)
 
-## Polls US Election 2016
+### Polls US Election 2016
 
 ```{r}
 library(dslabs)
@@ -203,3 +199,15 @@ sum(is.na(new_data))
 ```{r}
 anyNA(new_data)
 ```
+
+### AI Usage Statement
+
+ChatGPT was consulted for guidance on implementing loops, using functions such as \`sapply\` and \`apply\`, and handling missing values in data frames.\
+\
+All outputs produced by the AI tool were carefully reviewed, tested, and modified when necessary using my own understanding to ensure correctness.\
+\
+Example prompts used include:\
+\
+- "How can I apply a custom function to all columns of the mtcars dataset using a for loop in R?"\
+- "How can I replace NA values differently for numeric and character columns in a data frame?"\
+- "How can I count the number of NA values per column in an R dataset?"
