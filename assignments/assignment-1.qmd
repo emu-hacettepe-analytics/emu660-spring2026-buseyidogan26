@@ -4,12 +4,202 @@ title: "Assignment 1"
 
 # Assignment 1
 
-```{r}
-1 + 1
-```
-
 My first assignment has two parts.
 
 ## (a)
 
 ## (b)
+
+## (c)
+
+## Data Check
+
+```{r}
+data("mtcars")
+head(mtcars)
+```
+
+## Custom Summary Function
+
+The function `compute_stats` calculates several descriptive statistics **for a numeric vector.**
+
+It returns the mean, median, variance, interquartile range (IQR), minimum, and maximum values as a **named list.**
+
+```{r}
+compute_stats <- function(x) {
+  list(
+    mean = mean(x, na.rm = TRUE),
+    median = median(x, na.rm = TRUE),
+    variance = var(x, na.rm = TRUE),
+    IQR = IQR(x, na.rm = TRUE),
+    min = min(x, na.rm = TRUE),
+    max = max(x, na.rm = TRUE)
+  )
+}
+```
+
+## Applying the Function Using a Loop:
+
+In this section, the `compute_stats` function is applied to each numeric column of the `mtcars` dataset using a for loop. The computed statistics for each column are printed along with the column name.
+
+```{r}
+names(mtcars) #to see all column names
+```
+
+In this section, a `for` loop is used to iterate over all numerical columns of the `mtcars` dataset. For each column, the `compute_stats` function is applied to calculate previous summary statistics. The computed statistics are printed for each column along with the corresponding column name.
+
+```{r}
+for (column_name in names(mtcars)) {
+
+  column_data <- mtcars[[column_name]]
+
+  if (is.numeric(column_data)) {
+
+    stats <- compute_stats(column_data)
+
+    cat("Statistics for column:", column_name, "\n")
+    print(stats)
+  }
+}
+```
+
+Since the output is a little bit long, 'data.frame' is tried below.
+
+```{r}
+results <- list()
+
+for (column_name in names(mtcars)) {
+
+  column_data <- mtcars[[column_name]]
+  
+  stats <- compute_stats(column_data)
+  
+  results[[column_name]] <- unlist(stats)
+}
+
+stats_table <- as.data.frame(do.call(rbind, results))
+
+stats_table
+```
+
+## Applying Sapply Function
+
+In this section, the `sapply` function is used as an alternative to a `for` loop to apply the `compute_stats` function across all numerical columns of the `mtcars` dataset. The function is automatically applied to each column, and the resulting statistics are collected in a structured output.
+
+With this function, the output appears similar to a data frame structure.
+
+```{r}
+sapply(mtcars, compute_stats)
+```
+
+## Applying Apply Function
+
+In this section, the `apply` function is used to apply `compute_stats` to all numeric columns of the `mtcars` dataset.
+
+Since `apply` works on matrices, the numeric subset of the dataset is converted to a matrix.
+
+The function is applied column-wise (margin = 2), producing summary statistics for each column.
+
+```{r}
+#Choosing only numeric columns
+numeric_cols <- mtcars[, sapply(mtcars, is.numeric)]
+
+stats_apply <- apply(numeric_cols, 2, compute_stats)
+
+stats_apply
+
+```
+
+## (d)
+
+## Polls US Election 2016
+
+```{r}
+library(dslabs)
+data("polls_us_election_2016")
+head(polls_us_election_2016)
+```
+
+```{r}
+my_first <- "Buse"
+my_birth_year <- 2000
+k <- (nchar(my_first) + my_birth_year) %% 15 + 8
+print(k)
+```
+
+```{r}
+my_first <- "Buse"
+my_birth_year <- 2000
+k <- (nchar(my_first) + my_birth_year) %% 15 + 8
+
+if (k %% 2 == 0) {
+  head(polls_us_election_2016, k)
+} else {
+  tail(polls_us_election_2016, k)
+} #since my k value is odd number, else is returned.
+```
+
+First, the total number of missing values (NA) in the entire dataset is calculated.
+
+Next, the number of missing values in each column is calculated. The columns are sorted from the highest number of missing values to the lowest, and the top 8 columns are displayed.
+
+```{r}
+# Total NA
+sum(is.na(polls_us_election_2016))
+
+sort(colSums(is.na(polls_us_election_2016)), decreasing = TRUE)[1:8]
+```
+
+In this section, all missing values in the dataset are replaced according to the specified rules.
+
+For numeric columns, missing values are replaced with `my_birth_year + k`. For character or factor columns, missing values are replaced with a string created using `paste0(my_first, "_", k)`.
+
+The modified dataset is stored as a new object called `new_data`, leaving the original dataset unchanged.
+
+```{r}
+new_data <- polls_us_election_2016
+
+for(col in names(new_data)) {
+  
+  if(is.numeric(new_data[[col]])) {
+    
+    new_data[[col]][is.na(new_data[[col]])] <- my_birth_year + k
+    
+  } else if(is.factor(new_data[[col]])) {
+    
+    new_data[[col]] <- as.character(new_data[[col]])
+    new_data[[col]][is.na(new_data[[col]])] <- paste0(my_first, "_", k)
+    
+  } else if(is.character(new_data[[col]])) {
+    
+    new_data[[col]][is.na(new_data[[col]])] <- paste0(my_first, "_", k)
+    
+  }
+}
+```
+
+```{r}
+head(new_data)
+```
+
+Displaying 17 rows of the new data frame:
+
+```{r}
+my_first <- "Buse"
+my_birth_year <- 2000
+k <- (nchar(my_first) + my_birth_year) %% 15 + 8
+
+if (k %% 2 == 0) {
+  head(new_data, k)
+} else {
+  tail(new_data, k)
+}
+```
+
+```{r}
+sum(is.na(new_data))
+```
+
+```{r}
+anyNA(new_data)
+```
