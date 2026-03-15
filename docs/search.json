@@ -112,11 +112,31 @@
     "text": "Hobbies\nF1"
   },
   {
+    "objectID": "assignments/assignment-1.html",
+    "href": "assignments/assignment-1.html",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "I choosed to watch and analyze ‘Conversations on Data Science and Industrial Engineering - Baykal Hafızoğlu & Erdi Daşdemir’\nBrief Summary: In the video, the speakers discuss how Operations Research (OR) has increasingly focused on artificial intelligence (AI) and machine learning in recent years. They explain the Value Complexity framework, which classifies analytics into four types: descriptive, diagnostic, predictive, and prescriptive.\nDescriptive analysis aims to strengthen current performance. Techniques such as data mining and data visualization are commonly used.Diagnostic analysis focuses on interpreting hypotheses to understand and diagnose the current situation. Methods like hypothesis testing and clustering are important in this stage. Predictive analytics anticipates future behavior, making machine learning particularly relevant in this area. Prescriptive analysis can be thought of as providing recommendations or “prescriptions.” Optimization and mathematical modeling are heavily applied to determine the best course of action.\nThe video also emphasizes the importance of understanding the connections between different courses taken during undergraduate studies to gain a high-level perspective. In practice, descriptive, predictive, and prescriptive analyses are often used together. For example, in banking, these methods can be combined to assess the creditworthiness of a customer. Analytics solutions can be implemented as out-of-the-box tools or custom-made solutions, depending on the context.\nFinally, the speakers stress that clearly defining the problem is essential. Defining the problem properly allows subsequent steps, such as KPI identification, model development, and output delivery, to proceed effectively. In addition to modeling, attention must be paid to the user interface (UI) and usability, ensuring that solutions can be effectively utilized by end users.",
+    "crumbs": [
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment-1.html#a",
+    "href": "assignments/assignment-1.html#a",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "I choosed to watch and analyze ‘Conversations on Data Science and Industrial Engineering - Baykal Hafızoğlu & Erdi Daşdemir’\nBrief Summary: In the video, the speakers discuss how Operations Research (OR) has increasingly focused on artificial intelligence (AI) and machine learning in recent years. They explain the Value Complexity framework, which classifies analytics into four types: descriptive, diagnostic, predictive, and prescriptive.\nDescriptive analysis aims to strengthen current performance. Techniques such as data mining and data visualization are commonly used.Diagnostic analysis focuses on interpreting hypotheses to understand and diagnose the current situation. Methods like hypothesis testing and clustering are important in this stage. Predictive analytics anticipates future behavior, making machine learning particularly relevant in this area. Prescriptive analysis can be thought of as providing recommendations or “prescriptions.” Optimization and mathematical modeling are heavily applied to determine the best course of action.\nThe video also emphasizes the importance of understanding the connections between different courses taken during undergraduate studies to gain a high-level perspective. In practice, descriptive, predictive, and prescriptive analyses are often used together. For example, in banking, these methods can be combined to assess the creditworthiness of a customer. Analytics solutions can be implemented as out-of-the-box tools or custom-made solutions, depending on the context.\nFinally, the speakers stress that clearly defining the problem is essential. Defining the problem properly allows subsequent steps, such as KPI identification, model development, and output delivery, to proceed effectively. In addition to modeling, attention must be paid to the user interface (UI) and usability, ensuring that solutions can be effectively utilized by end users.",
+    "crumbs": [
+      "Assignment 1"
+    ]
+  },
+  {
     "objectID": "assignments/assignment-1.html#b",
     "href": "assignments/assignment-1.html#b",
     "title": "Assignment 1",
     "section": "(b)",
-    "text": "(b)",
+    "text": "(b)\nQ: Why is predictive analytics considered particularly important in modern operations research and business applications, according to the video?\nA: Predictive analytics is important because it focuses on anticipating future behaviors and outcomes. This allows organizations to make data-driven decisions and prepare for possible scenarios. Machine learning techniques are especially useful for creating accurate predictions.\nQ:Which of the following statements correctly describes prescriptive analysis, as discussed in the video?\n\nIt focuses solely on visualizing current data.\nIt interprets hypotheses to diagnose the current situation.\nIt provides recommendations and uses optimization and mathematical modeling.\nIt predicts future events without providing any actionable advice.\n\nA: C",
     "crumbs": [
       "Assignment 1"
     ]
