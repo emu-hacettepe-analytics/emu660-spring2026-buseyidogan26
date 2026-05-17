@@ -2,63 +2,63 @@
   {
     "objectID": "project.html",
     "href": "project.html",
-    "title": "Project X",
+    "title": "Analysis of Fuel Prices, 2020-2026",
     "section": "",
-    "text": "Welcome to my/our project page.\nKeep an eye on this space to stay updated with my project activities.\n(The titles below are provided as examples; please feel free to adjust them as necessary.)"
+    "text": "This is our project page.\nKeep an eye on this space to stay updated with my project activities."
   },
   {
     "objectID": "project.html#data-source",
     "href": "project.html#data-source",
-    "title": "Project X",
+    "title": "Analysis of Fuel Prices, 2020-2026",
     "section": "2.1 Data Source",
     "text": "2.1 Data Source\nClick for Data"
   },
   {
     "objectID": "project.html#general-information-about-data",
     "href": "project.html#general-information-about-data",
-    "title": "Project X",
+    "title": "Analysis of Fuel Prices, 2020-2026",
     "section": "2.2 General Information About Data",
     "text": "2.2 General Information About Data\nThis dataset contains 27468 observations tracking the prices of Petrol, Diesel, and LPG. Each entry is enriched with regional, economic, and policy-level metadata to provide a holistic view of the global fuel economy.\nTemporal Coverage: Weekly data from January 2020 to April 2026.\nGlobal Scale: 84 countries across 7 geographic regions.\nEconomic Context: Integrated Brent Crude benchmarks, tax percentages, and subsidy levels.\nNormalization: All pricing data is standardized to USD per Liter."
   },
   {
     "objectID": "project.html#reason-of-choice",
     "href": "project.html#reason-of-choice",
-    "title": "Project X",
+    "title": "Analysis of Fuel Prices, 2020-2026",
     "section": "2.3 Reason of Choice",
-    "text": "2.3 Reason of Choice\nThis dataset was chosen because fuel prices are highly sensitive to global geopolitical events, particularly wars and conflicts. Recent events such as the ABD–Iran war have caused significant volatility in oil supply and Brent crude prices, leading to fluctuations in petrol, diesel, and LPG prices worldwide. Therefore, the dataset is suitable for analyzing how geopolitical instability affects fuel prices across countries, including Turkey.\nThis study also compares the impact of major geopolitical events, specifically the Russia–Ukraine conflict in February 2022 and the United States–Iran conflict in March 2026, on fuel prices across different countries. The analysis focuses on differences in price sensitivity between countries, with a particular emphasis on Turkey. The aim is to assess how strongly fuel prices in Turkey are affected compared to other countries such as the United States during these periods.\nAdditionally, we aim to analyze the trend of fuel prices in Turkey between 2020 and 2026, examining how prices responded to the specified geopolitical events and assessing the nature of these responses over time."
+    "text": "2.3 Reason of Choice\nThis dataset was chosen because fuel prices are highly sensitive to global geopolitical events, particularly wars and conflicts. Recent events such as the ABD–Iran war have caused significant volatility in oil supply and Brent crude prices, leading to fluctuations in petrol, diesel, and LPG prices worldwide. Therefore, the dataset is suitable for analyzing how geopolitical instability affects fuel prices across countries, including Turkey."
   },
   {
     "objectID": "project.html#preprocessing",
     "href": "project.html#preprocessing",
-    "title": "Project X",
+    "title": "Analysis of Fuel Prices, 2020-2026",
     "section": "2.4 Preprocessing",
     "text": "2.4 Preprocessing\nxxxxxx"
   },
   {
     "objectID": "project.html#exploratory-data-analysis",
     "href": "project.html#exploratory-data-analysis",
-    "title": "Project X",
+    "title": "Analysis of Fuel Prices, 2020-2026",
     "section": "3.1 Exploratory Data Analysis",
     "text": "3.1 Exploratory Data Analysis\nxxxxxx"
   },
   {
     "objectID": "project.html#trend-analysis",
     "href": "project.html#trend-analysis",
-    "title": "Project X",
+    "title": "Analysis of Fuel Prices, 2020-2026",
     "section": "3.2 Trend Analysis",
     "text": "3.2 Trend Analysis\nxxxxxx"
   },
   {
     "objectID": "project.html#model-fitting",
     "href": "project.html#model-fitting",
-    "title": "Project X",
+    "title": "Analysis of Fuel Prices, 2020-2026",
     "section": "3.3 Model Fitting",
     "text": "3.3 Model Fitting\nxxxxxx"
   },
   {
     "objectID": "project.html#results",
     "href": "project.html#results",
-    "title": "Project X",
+    "title": "Analysis of Fuel Prices, 2020-2026",
     "section": "3.4 Results",
     "text": "3.4 Results\nxxxxxx"
   },

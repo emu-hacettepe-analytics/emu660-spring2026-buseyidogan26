@@ -1,16 +1,16 @@
 ---
-title: "Project X"
+title: "Analysis of Fuel Prices, 2020-2026"
 ---
 
-Welcome to my/our project page.
+This is our project page.
 
 Keep an eye on this space to stay updated with my project activities.
 
-(The titles below are provided as examples; please feel free to adjust them as necessary.)
-
 # 1. Project Overview and Scope
 
-xxxxxx
+This study compares the impact of major geopolitical events, specifically the Russia–Ukraine conflict in February 2022 and the United States–Iran conflict in March 2026, on fuel prices across different countries. The analysis focuses on differences in price sensitivity between countries, with a particular emphasis on Turkey. The aim is to assess how strongly fuel prices in Turkey are affected compared to other countries such as the United States during these periods.
+
+Additionally, we aim to analyze the trend of fuel prices in Turkey between 2020 and 2026, examining how prices responded to the specified geopolitical events and assessing the nature of these responses over time.
 
 # 2. Data
 
@@ -28,22 +28,17 @@ We imported our dataset directly from Kaggle.com into RStudio and began the anal
 
 This dataset contains 27468 observations tracking the prices of Petrol, Diesel, and LPG. Each entry is enriched with regional, economic, and policy-level metadata to provide a holistic view of the global fuel economy.
 
-Temporal Coverage: Weekly data from January 2020 to April 2026.
+**Temporal Coverage:** Weekly data from January 2020 to April 2026.
 
-Global Scale: 84 countries across 7 geographic regions.
+**Global Scale:** 84 countries across 7 geographic regions.
 
-Economic Context: Integrated Brent Crude benchmarks, tax percentages, and subsidy levels.
+**Economic Context:** Integrated Brent Crude benchmarks, tax percentages, and subsidy levels.
 
-Normalization: All pricing data is standardized to USD per Liter.
-
+**Normalization:** All pricing data is standardized to USD per Liter.
 
 ## 2.3 Reason of Choice
 
 This dataset was chosen because fuel prices are highly sensitive to global geopolitical events, particularly wars and conflicts. Recent events such as the ABD–Iran war have caused significant volatility in oil supply and Brent crude prices, leading to fluctuations in petrol, diesel, and LPG prices worldwide. Therefore, the dataset is suitable for analyzing how geopolitical instability affects fuel prices across countries, including Turkey.
-
-This study also compares the impact of major geopolitical events, specifically the Russia–Ukraine conflict in February 2022 and the United States–Iran conflict in March 2026, on fuel prices across different countries. The analysis focuses on differences in price sensitivity between countries, with a particular emphasis on Turkey. The aim is to assess how strongly fuel prices in Turkey are affected compared to other countries such as the United States during these periods.
-
-Additionally, we aim to analyze the trend of fuel prices in Turkey between 2020 and 2026, examining how prices responded to the specified geopolitical events and assessing the nature of these responses over time.
 
 ## 2.4 Preprocessing
 
@@ -74,7 +69,7 @@ xxxxxx
 ```{r}
 library(tidyverse)
 ```
-global_fuel_prices<-read.csv("/Users/seymasezer/Desktop/emu660-spring2026-seymasezery/global_fuel_prices_2020_2026.csv")
+
 ```{r}
 global_fuel_prices<-read.csv("/Users/buseerdogan/Desktop/EMU660/emu660-spring2026-buseyidogan26/global_fuel_prices_2020_2026.csv")
 ```
@@ -94,6 +89,7 @@ nrow(global_fuel_prices)
 ```{r}
 colSums(is.na(global_fuel_prices))
 ```
+
 ```{r}
 #Petrol zaman trendi
 global_fuel_prices|>ggplot(aes(x=date, y=petrol_usd_liter))+geom_line(color="blue")+xlab("Date")+ylab("USD per Liter")+ggtitle("Petrol Price Over Time")
@@ -111,12 +107,41 @@ global_fuel_prices|>ggplot(aes(x=date, y=lpg_usd_liter))+geom_line(color="green"
 
 ```{r}
 global_fuel_prices |>
+  filter(country == "Turkey") |>
+  mutate(date = as.Date(date)) |>
+  arrange(date) |>
+  pivot_longer(cols = c(petrol_usd_liter, diesel_usd_liter, lpg_usd_liter),
+               names_to = "fuel_type",
+               values_to = "price") |>
+  ggplot(aes(x = date, y = price, color = fuel_type, group = fuel_type)) +
+  geom_line(linewidth = 1) +
+  labs(title = "Fuel Price Trends in Turkey (2020–2026)",
+       x = "Date",
+       y = "USD per Liter",
+       color = "Fuel Type")
+```
+
+```{r}
+global_fuel_prices |>
+  filter(country == "Turkey") |>
+  mutate(date = as.Date(date)) |>
+  arrange(date) |>
+  ggplot(aes(x = date, y = lpg_usd_liter, group = 1)) +
+  geom_line(color = "green") +
+  xlab("Date") +
+  ylab("USD per Liter") +
+  ggtitle("LPG Price Over Time (Turkey)")
+```
+
+```{r}
+global_fuel_prices |>
   ggplot(aes(x = country, y = petrol_usd_liter)) +
   geom_boxplot(fill = "lightblue") +
   geom_point(position = position_jitter(width = 0.2), alpha = 0.4) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   xlab("country")+ylab("USD per Liter")+ggtitle("Petrol Prices by Country")
 ```
+
 ```{r}
 top_countries <- global_fuel_prices |>
   group_by(country) |>
@@ -133,5 +158,3 @@ global_fuel_prices|>filter(country %in% top_countries)|>
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   xlab("country")+ylab("USD per Liter")+ggtitle("Petrol Prices by Country")
 ```
-
-
