@@ -1,5 +1,11 @@
 ---
 title: "Analysis of Fuel Prices, 2020-2026"
+format: html
+
+toc: true
+
+code-fold: true
+code-summary: "Show Code"
 ---
 
 This is our project page.
@@ -53,7 +59,7 @@ The dataset obtained from Kaggle required minimal preprocessing, as it did not c
 
 ```{r}
 global_fuel_prices<-read.csv("/Users/buseerdogan/Desktop/EMU660/emu660-spring2026-buseyidogan26/global_fuel_prices_2020_2026.csv")
-library(tidyr)
+library(tidyverse)
 library(ggplot2)
 library(dplyr)
 
@@ -213,5 +219,3 @@ The impact analysis, based on pre- and post-war comparisons, demonstrates that f
 -   Petrol prices are more sensitive to geopolitical disruptions compared to LPG and diesel.
 
 -   Turkey is among the relatively more affected countries, showing higher-than-average price increases in the post-war period.
-
-
