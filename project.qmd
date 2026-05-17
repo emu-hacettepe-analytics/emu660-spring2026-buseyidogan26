@@ -20,7 +20,7 @@ The global energy landscape has faced significant volatility between 2020 and 20
 
 ## 2.1 Data Source
 
-https://www.kaggle.com/datasets/belbino/global-fuel-prices-20202026/data
+[Click for Data](https://www.kaggle.com/datasets/belbino/global-fuel-prices-20202026/data){.btn .btn-dark}
 
 ## 2.2 General Information About Data
 
@@ -37,7 +37,11 @@ Normalization: All pricing data is standardized to USD per Liter.
 
 ## 2.3 Reason of Choice
 
-This dataset was chosen because fuel prices are highly sensitive to global geopolitical events, particularly wars and conflicts. Recent events such as the Israel–Iran war have caused significant volatility in oil supply and Brent crude prices, leading to fluctuations in petrol, diesel, and LPG prices worldwide. Therefore, the dataset is suitable for analyzing how geopolitical instability affects fuel prices across countries, including Turkey.
+This dataset was chosen because fuel prices are highly sensitive to global geopolitical events, particularly wars and conflicts. Recent events such as the ABD–Iran war have caused significant volatility in oil supply and Brent crude prices, leading to fluctuations in petrol, diesel, and LPG prices worldwide. Therefore, the dataset is suitable for analyzing how geopolitical instability affects fuel prices across countries, including Turkey.
+
+This study also compares the impact of major geopolitical events, specifically the Russia–Ukraine conflict in February 2022 and the United States–Iran conflict in March 2026, on fuel prices across different countries. The analysis focuses on differences in price sensitivity between countries, with a particular emphasis on Turkey. The aim is to assess how strongly fuel prices in Turkey are affected compared to other countries such as the United States during these periods.
+
+Additionally, we aim to analyze the trend of fuel prices in Turkey between 2020 and 2026, examining how prices responded to the specified geopolitical events and assessing the nature of these responses over time.
 
 ## 2.4 Preprocessing
 
