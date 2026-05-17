@@ -24,11 +24,14 @@ Global Fuel Prices & Economic Indicators (2020-2026)
 
 The global energy landscape has faced significant volatility between 2020 and 2026. This dataset provides a standardized, weekly record of retail fuel prices across 84 countries, aligned with global crude oil benchmarks and national fiscal indicators. It serves as a unified resource for analyzing the relationship between international commodity markets and local retail costs.
 
-```{r}
+```{r setup, include=FALSE}
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(dplyr))
 global_fuel_prices <- read.csv("/Users/buseerdogan/Desktop/EMU660/emu660-spring2026-buseyidogan26/global_fuel_prices_2020_2026.csv")
 head(global_fuel_prices)
 
 library(tidyverse)
+library(dplyr)
 ```
 
 ## 2.1 Data Source
