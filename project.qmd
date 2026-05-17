@@ -18,7 +18,10 @@ Global Fuel Prices & Economic Indicators (2020-2026)
 
 The global energy landscape has faced significant volatility between 2020 and 2026. This dataset provides a standardized, weekly record of retail fuel prices across 84 countries, aligned with global crude oil benchmarks and national fiscal indicators. It serves as a unified resource for analyzing the relationship between international commodity markets and local retail costs.
 
-We imported our dataset directly from Kaggle.com into RStudio and began the analysis. Before using the data, we inspected the columns to ensure that there were no missing values (NAs) or data quality issues. The dataset was already in a ready-to-use format, so no additional data cleaning or preprocessing was required.
+```{r}
+global_fuel_prices<-read.csv("/Users/buseerdogan/Desktop/EMU660/emu660-spring2026-buseyidogan26/global_fuel_prices_2020_2026.csv")
+head(global_fuel_prices)
+```
 
 ## 2.1 Data Source
 
@@ -42,7 +45,7 @@ This dataset was chosen because fuel prices are highly sensitive to global geopo
 
 ## 2.4 Preprocessing
 
-xxxxxx
+The dataset obtained from Kaggle required minimal preprocessing, as it did not contain any missing values (NAs) or major data quality issues across its variables. The only necessary transformation involved the date variable, which was originally stored as a character type. In order to perform time series and trend analysis accurately, the date variable was converted into a proper Date format using the as.Date() function in R.
 
 # 3. Analysis
 
@@ -50,7 +53,37 @@ xxxxxx
 
 ## 3.1 Exploratory Data Analysis
 
-xxxxxx
+```{r}
+global_fuel_prices<-read.csv("/Users/buseerdogan/Desktop/EMU660/emu660-spring2026-buseyidogan26/global_fuel_prices_2020_2026.csv")
+library(tidyr)
+library(ggplot2)
+library(dplyr)
+
+df_rank <- global_fuel_prices |>
+  group_by(country, region) |>
+  summarise(avg_petrol = mean(petrol_usd_liter, na.rm = TRUE),
+            .groups = "drop") |>
+  arrange(desc(avg_petrol)) |>
+  mutate(rank = row_number())
+
+top10_plus_tr <- df_rank |>
+  filter(rank <= 10 | country == "Turkey")
+
+ggplot(top10_plus_tr,
+       aes(x = reorder(country, avg_petrol),
+           y = avg_petrol,
+           fill = region)) +
+  geom_col() +
+  coord_flip() +
+  geom_text(aes(label = rank),
+            hjust = -0.2,
+            size = 3) +
+  labs(title = "Average Petrol Prices by Country (Top 10, Turkey Included)",
+       x = "Country",
+       y = "Average Petrol Price (USD/Liter)",
+       fill = "Region") +
+  theme_minimal()
+```
 
 ## 3.2 Trend Analysis
 
@@ -71,6 +104,38 @@ global_fuel_prices |>
 ```
 
 The sharp price increase observed in the chart in 2022 can be attributed to the tightening of global energy supplies following the Russia-Ukraine war. Similarly, the resurgence in prices seen at the end of 2025 and the beginning of 2026 can be attributed to the reflection of new geopolitical risks and supply uncertainties in the market. This situation demonstrates that fuel prices are highly sensitive not only to economic factors but also to geopolitical ones.
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+
+df <- global_fuel_prices |>
+  mutate(date = as.Date(date),
+         period = ifelse(date < as.Date("2022-02-01"), "Pre-War", "Post-War"))
+
+df_long <- df |>
+  pivot_longer(cols = c(petrol_usd_liter, diesel_usd_liter, lpg_usd_liter),
+               names_to = "fuel_type",
+               values_to = "price")
+
+impact_df <- df_long |>
+  group_by(region, fuel_type, period) |>
+  summarise(avg_price = mean(price, na.rm = TRUE), .groups = "drop") |>
+  pivot_wider(names_from = period, values_from = avg_price) |>
+  mutate(impact = `Post-War` - `Pre-War`)
+
+ggplot(impact_df,
+       aes(x = region, y = impact, fill = fuel_type)) +
+  geom_col(position = "dodge") +
+  coord_flip() +
+  labs(title = "War Impact on Fuel Prices by Region",
+       x = "Region",
+       y = "Price Impact (Post - Pre)",
+       fill = "Fuel Type") +
+  theme_minimal()
+```
+
 
 ## 3.3 Model Fitting
 

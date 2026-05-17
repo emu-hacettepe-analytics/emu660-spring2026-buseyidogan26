@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "project.html",
+    "href": "project.html",
+    "title": "Analysis of Fuel Prices, 2020-2026",
+    "section": "",
+    "text": "This is our project page.\nKeep an eye on this space to stay updated with my project activities."
+  },
+  {
+    "objectID": "project.html#data-source",
+    "href": "project.html#data-source",
+    "title": "Analysis of Fuel Prices, 2020-2026",
+    "section": "2.1 Data Source",
+    "text": "2.1 Data Source\nClick for Data"
+  },
+  {
+    "objectID": "project.html#general-information-about-data",
+    "href": "project.html#general-information-about-data",
+    "title": "Analysis of Fuel Prices, 2020-2026",
+    "section": "2.2 General Information About Data",
+    "text": "2.2 General Information About Data\nThis dataset contains 27468 observations tracking the prices of Petrol, Diesel, and LPG. Each entry is enriched with regional, economic, and policy-level metadata to provide a holistic view of the global fuel economy.\nTemporal Coverage: Weekly data from January 2020 to April 2026.\nGlobal Scale: 84 countries across 7 geographic regions.\nEconomic Context: Integrated Brent Crude benchmarks, tax percentages, and subsidy levels.\nNormalization: All pricing data is standardized to USD per Liter."
+  },
+  {
+    "objectID": "project.html#reason-of-choice",
+    "href": "project.html#reason-of-choice",
+    "title": "Analysis of Fuel Prices, 2020-2026",
+    "section": "2.3 Reason of Choice",
+    "text": "2.3 Reason of Choice\nThis dataset was chosen because fuel prices are highly sensitive to global geopolitical events, particularly wars and conflicts. Recent events such as the ABD–Iran war have caused significant volatility in oil supply and Brent crude prices, leading to fluctuations in petrol, diesel, and LPG prices worldwide. Therefore, the dataset is suitable for analyzing how geopolitical instability affects fuel prices across countries, including Turkey."
+  },
+  {
+    "objectID": "project.html#preprocessing",
+    "href": "project.html#preprocessing",
+    "title": "Analysis of Fuel Prices, 2020-2026",
+    "section": "2.4 Preprocessing",
+    "text": "2.4 Preprocessing\nThe dataset obtained from Kaggle required minimal preprocessing, as it did not contain any missing values (NAs) or major data quality issues across its variables. The only necessary transformation involved the date variable, which was originally stored as a character type. In order to perform time series and trend analysis accurately, the date variable was converted into a proper Date format using the as.Date() function in R."
+  },
+  {
+    "objectID": "project.html#exploratory-data-analysis",
+    "href": "project.html#exploratory-data-analysis",
+    "title": "Analysis of Fuel Prices, 2020-2026",
+    "section": "3.1 Exploratory Data Analysis",
+    "text": "3.1 Exploratory Data Analysis\n\nglobal_fuel_prices&lt;-read.csv(\"/Users/buseerdogan/Desktop/EMU660/emu660-spring2026-buseyidogan26/global_fuel_prices_2020_2026.csv\")\nlibrary(tidyr)\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\ndf_rank &lt;- global_fuel_prices |&gt;\n  group_by(country, region) |&gt;\n  summarise(avg_petrol = mean(petrol_usd_liter, na.rm = TRUE),\n            .groups = \"drop\") |&gt;\n  arrange(desc(avg_petrol)) |&gt;\n  mutate(rank = row_number())\n\ntop10_plus_tr &lt;- df_rank |&gt;\n  filter(rank &lt;= 10 | country == \"Turkey\")\n\nggplot(top10_plus_tr,\n       aes(x = reorder(country, avg_petrol),\n           y = avg_petrol,\n           fill = region)) +\n  geom_col() +\n  coord_flip() +\n  geom_text(aes(label = rank),\n            hjust = -0.2,\n            size = 3) +\n  labs(title = \"Average Petrol Prices by Country (Top 10, Turkey Included)\",\n       x = \"Country\",\n       y = \"Average Petrol Price (USD/Liter)\",\n       fill = \"Region\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "project.html#trend-analysis",
+    "href": "project.html#trend-analysis",
+    "title": "Analysis of Fuel Prices, 2020-2026",
+    "section": "3.2 Trend Analysis",
+    "text": "3.2 Trend Analysis\n\nglobal_fuel_prices |&gt;\n  filter(country == \"Turkey\") |&gt;\n  mutate(date = as.Date(date)) |&gt;\n  arrange(date) |&gt;\n  pivot_longer(cols = c(petrol_usd_liter, diesel_usd_liter, lpg_usd_liter),\n               names_to = \"fuel_type\",\n               values_to = \"price\") |&gt;\n  ggplot(aes(x = date, y = price, color = fuel_type, group = fuel_type)) +\n  geom_line(linewidth = 1) +\n  labs(title = \"Fuel Price Trends in Turkey (2020–2026)\",\n       x = \"Date\",\n       y = \"USD per Liter\",\n       color = \"Fuel Type\")\n\n\n\n\n\n\n\n\nThe sharp price increase observed in the chart in 2022 can be attributed to the tightening of global energy supplies following the Russia-Ukraine war. Similarly, the resurgence in prices seen at the end of 2025 and the beginning of 2026 can be attributed to the reflection of new geopolitical risks and supply uncertainties in the market. This situation demonstrates that fuel prices are highly sensitive not only to economic factors but also to geopolitical ones.\n\nlibrary(dplyr)\nlibrary(tidyr)\nlibrary(ggplot2)\n\ndf &lt;- global_fuel_prices |&gt;\n  mutate(date = as.Date(date),\n         period = ifelse(date &lt; as.Date(\"2022-02-01\"), \"Pre-War\", \"Post-War\"))\n\ndf_long &lt;- df |&gt;\n  pivot_longer(cols = c(petrol_usd_liter, diesel_usd_liter, lpg_usd_liter),\n               names_to = \"fuel_type\",\n               values_to = \"price\")\n\nimpact_df &lt;- df_long |&gt;\n  group_by(region, fuel_type, period) |&gt;\n  summarise(avg_price = mean(price, na.rm = TRUE), .groups = \"drop\") |&gt;\n  pivot_wider(names_from = period, values_from = avg_price) |&gt;\n  mutate(impact = `Post-War` - `Pre-War`)\n\nggplot(impact_df,\n       aes(x = region, y = impact, fill = fuel_type)) +\n  geom_col(position = \"dodge\") +\n  coord_flip() +\n  labs(title = \"War Impact on Fuel Prices by Region\",\n       x = \"Region\",\n       y = \"Price Impact (Post - Pre)\",\n       fill = \"Fuel Type\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "project.html#model-fitting",
+    "href": "project.html#model-fitting",
+    "title": "Analysis of Fuel Prices, 2020-2026",
+    "section": "3.3 Model Fitting",
+    "text": "3.3 Model Fitting\nxxxxxx"
+  },
+  {
+    "objectID": "project.html#results",
+    "href": "project.html#results",
+    "title": "Analysis of Fuel Prices, 2020-2026",
+    "section": "3.4 Results",
+    "text": "3.4 Results\nxxxxxx"
+  }
+]
