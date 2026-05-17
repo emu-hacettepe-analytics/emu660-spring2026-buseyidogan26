@@ -66,6 +66,7 @@ The dataset obtained from Kaggle required minimal preprocessing, as it did not c
 global_fuel_prices<-read.csv("/Users/buseerdogan/Desktop/EMU660/emu660-spring2026-buseyidogan26/global_fuel_prices_2020_2026.csv")
 library(tidyr)
 library(ggplot2)
+library(dplyr)
 
 df_rank <- global_fuel_prices |>
   group_by(country, region) |>
